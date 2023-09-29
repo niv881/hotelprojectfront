@@ -39,8 +39,9 @@ const Login = () => {
           authService
             .login(username, password)
             .then((res) => {
+              if(res.data){
               Swal.fire({
-                title: "Login successfully",
+                title: "Login successfully 😄",
                 icon: "success",
                 timer: 4000,
               });
@@ -48,12 +49,25 @@ const Login = () => {
               const user = JSON.parse(data || '{}')
               login(username,res.data.jwt,user.role.some((role: { authority: string; })=> role.authority === 'ROLE_MANAGER'))
               nav("/home");
+            }else if(res.response){
+            Swal.fire({
+              title: 'Oops...',
+              text: `${res.response.data.message}`,
+              icon: "error",
+              timer: 4000,
+            })}else{
+              Swal.fire({
+                title: 'Oops...',
+                text: `${res}`,
+                icon: "error",
+                timer: 4000,
+              })
+              setError('Server Error !')
+            };
             })
-            .catch((e) => {
+            .catch(() => {
               setError(
-                JSON.stringify(
-                  e.response.data.message + "! : " + e.response.data.rejectedValue
-                )
+                `UserName or password are incorrect`
               );
             })
             .finally(() => {

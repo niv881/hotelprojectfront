@@ -1,4 +1,5 @@
 import axios from "axios"
+import { string } from "yup"
 
 const baseUrl = 'http://localhost:8080/auth'
 
@@ -21,7 +22,10 @@ export const login = (username:string , password:string) =>{
         }
 
         return res
-    })
+    }).catch((e) => {
+        return e
+    } ) 
+        
 }
 export const logout = ()=>{
     localStorage.removeItem("user");

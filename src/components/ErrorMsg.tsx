@@ -6,7 +6,7 @@ interface msg{
 
 function ErrorMsg({massage} : msg) {
   return (
-    <div className='text-center text-red-600 font-semibold text-3xl '>{massage}</div>
+    <div className='text-center text-red-600 font-semibold text-3xl p-10 '>{massage}</div>
   )
 }
 
