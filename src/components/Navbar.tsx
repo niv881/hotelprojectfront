@@ -1,7 +1,7 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import DarkModeContext from "../utils/DarkModeContext";
-import { useContext, useEffect, useState } from "react";
-import { BsMoonFill, BsSunFill } from "react-icons/bs";
+import ToggleToDarkMode from "../utils/ToggleToDarkMode";
 import AuthContext from "../utils/UserContext";
 
 const isActive = (o: any) =>
@@ -10,27 +10,18 @@ const isActive = (o: any) =>
     : "text-black-300 hover:bg-green-700 dark:hover:bg-green-400 dark:hover:text-black dark:text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium";
 
 const Navbar = () => {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { toggleDarkMode } = useContext(DarkModeContext);
 
   const { isManager, logout, isLoggedIn } = useContext(AuthContext);
 
   return (
     <nav className="flex justify-start items-center pe-10 mb-3 bg-green-300 p-2 dark:bg-green-800 ">
-
       <NavLink to={"/home"} className={isActive}>
         Home
       </NavLink>
       <NavLink to={"/about"} className={isActive}>
         About
       </NavLink>
-      <button
-        className="ms-3 dark:text-white"
-        onClick={() => {
-          toggleDarkMode();
-        }}
-      >
-        {darkMode ? <BsSunFill /> : <BsMoonFill />}
-      </button>
 
       <div className="flex-1"></div>
       <div className="hidden sm:flex sm:items-center">
@@ -60,6 +51,7 @@ const Navbar = () => {
           Register
         </NavLink>
       )}
+  <ToggleToDarkMode onClick={toggleDarkMode} />
     </nav>
   );
 };

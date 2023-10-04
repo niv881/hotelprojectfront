@@ -6,19 +6,16 @@ import DatepickerC from "../components/DatePickerC";
 import HotelContext from "../utils/HotelsContext";
 import { useNavigate } from "react-router-dom";
 import { HotelRespone } from "../utils/interfeces/@Types";
-import HotelCard from "../components/HotelCard";
 import ErrorMsg from "../components/ErrorMsg";
 import Spinner from "../utils/Spinner";
-
-
+import HotelCard from "../components/HotelCard";
+import Footer from "../components/Footer";
 
 const style = { background: "bg-green-200", drakMode: "bg-green-400" };
-const errorMsg = "Error Occurred ! come back later 😄"
-
+const errorMsg = "Error Occurred ! come back later 😄";
 
 const Home = () => {
-  const nav = useNavigate();
-  const {setInputAddress , hotels, time} = useContext(HotelContext)
+  const { setInputAddress, hotels, time } = useContext(HotelContext);
   const [dateCheckIn, setDateChackIn] = useState("");
   const [dateCheckOut, setDateCheckOut] = useState("");
 
@@ -29,45 +26,44 @@ const Home = () => {
     setDateCheckOut(p);
   };
 
-  const getInputAddress = (address : string) => {
-      if(address){
-        setInputAddress(address)
-        nav("/hotels")
-      }else{
-        <p>No valid !!</p>
-      }
-  }
-
+  const getInputAddress = (address: string) => {
+    if (address) {
+      setInputAddress(address);
+    } else {
+      <p>No valid !!</p>;
+    }
+  };
 
   return (
     <>
       <Card style={style}>
         <DatepickerC check="check In" date={setCheckIn} />
         <DatepickerC check="check Out" date={setChecOut} />
-        <FormAddress address ={getInputAddress} />
+        <FormAddress address={getInputAddress} />
       </Card>
-      {!time ? (
-        hotels.length > 0 ? (
-          <Card style={style}>
-            <div className="w-full">
-              {hotels.map((hotel: HotelRespone) => (
-                <div key={hotel.hotel.id}>
-                  <HotelCard
-                    hotel={hotel.hotel}
-                    address={hotel.address}
-                    rooms={hotel.rooms}
-                    images={hotel.images}
-                  />
-                </div>
-              ))}
-            </div>
-          </Card>
+      
+        {!time ? (
+          hotels.length > 0 ? (
+            <Card style={style}>
+              <div className="w-full ">
+                {hotels.map((hotel: HotelRespone) => (
+                  <div key={hotel.hotel.id}>
+                    <HotelCard
+                      hotel={hotel.hotel}
+                      address={hotel.address}
+                      rooms={hotel.rooms}
+                      images={hotel.images}
+                    />
+                  </div>
+                ))}
+              </div>
+            </Card>
+          ) : (
+            <ErrorMsg massage={errorMsg} />
+          )
         ) : (
-          <ErrorMsg massage = {errorMsg}/>
-        )
-      ) : (
-        <Spinner />
-      )}
+          <Spinner />
+        )}
       <PageTitle title={`${dateCheckIn} , ${dateCheckOut}`} />
     </>
   );

@@ -50,7 +50,7 @@ const HotelForm = () => {
             icon: "success",
             timer: 4000,
           });
-          nav("/hotels")
+          nav("/")
         });
       }}
     >

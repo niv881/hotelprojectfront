@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { HotelRespone, Room } from "../utils/interfeces/@Types";
 import RoomCard from "./RoomCard";
+import HotelModal from "./HotelModal";
+
 
 const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
   const [showModal, setShowModal] = useState(false);
@@ -104,7 +106,8 @@ const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
       </div>
       {showModal && (
         <div>
-            <RoomCard rooms={rooms} closeModal={closeModal}  />
+
+            <HotelModal hotel={hotel} address={address} rooms={rooms} images={images}  closeModal={closeModal}  />
         </div>
       )}
     </div>

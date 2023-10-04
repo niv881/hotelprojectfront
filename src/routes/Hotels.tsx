@@ -17,8 +17,7 @@ const Hotels = () => {
 
   return (
     <>
-      <Home />
-      {!time ? (
+          {!time ? (
         hotels.length > 0 ? (
           <Card style={style}>
             <div className="w-full">

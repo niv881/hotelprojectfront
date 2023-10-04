@@ -1,4 +1,3 @@
-import { AxiosHeaders, AxiosRequestConfig } from "axios";
 
 export interface ClassName {
   background: string;
@@ -52,12 +51,39 @@ export interface HotelRespone {
   rooms: Room[];
 }
 
+export interface HotelResponeModalProps {
+  hotel: {
+    id: number;
+    name: string;
+    email: string;
+    phoneNumber: string;
+    rating: number;
+    about: string;
+  };
+  address: {
+    city: string;
+    country: string;
+    street: string;
+    streetNumber: string;
+  };
+  images: Array<{ id: number; image: string }>;
+  rooms: Room[];
+  closeModal: () => void;
+}
+
+export interface RoomCardProps {
+  closeRoomModal: () => void; // Define the new prop
+  rooms: Room[]; // Assuming Room is defined somewhere in your code
+}
+
 export interface HotelData {
   hotels: HotelRespone[];
 }
 
-export interface Role{
 
+export interface BTNProps {
+  onClick: () => void; // Define the new prop
+  text? : string
 }
 
 export interface User {
