@@ -15,7 +15,7 @@ const HotelModal = ({
   const openRoomModal = () => {
     setShowModal(true);
   };
-
+{/* <Button onClick={handleSubmit} text="GO!"/> */}
   const closeRoomModal = () => {
     setShowModal(false);
   };
@@ -45,7 +45,7 @@ const HotelModal = ({
               </p>
 
               <h2 className="mt-6 font-black uppercase">
-                <span className="mt-2 block text-sm">{hotel.about}</span>
+                <span className="mt-2 block text-sm mb-5">{hotel.about}</span>
               </h2>
 
 <Button onClick={openRoomModal} text="To the hotel rooms press here" />

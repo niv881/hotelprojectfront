@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { HotelRespone, Room } from "../utils/interfeces/@Types";
-import RoomCard from "./RoomCard";
+import { useState } from "react";
+import Button from "../utils/Button";
+import { HotelRespone } from "../utils/interfeces/@Types";
 import HotelModal from "./HotelModal";
-
 
 const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
   const [showModal, setShowModal] = useState(false);
@@ -95,19 +94,18 @@ const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
           <span className="text-3xl font-bold text-gray-900 dark:text-white">
             {rooms[0].price.toLocaleString()}
           </span>
-          <button
-            onClick={openModal}
-            type="submit"
-            className="bg-green-700 dark:bg-green-400 dark:text-black dark:font-bold font-bold text-white p-4 ms-5 rounded-lg "
-          >
-            Make Reservations
-          </button>
+          <Button onClick={openModal} text="Make Reservations" />
         </div>
       </div>
       {showModal && (
         <div>
-
-            <HotelModal hotel={hotel} address={address} rooms={rooms} images={images}  closeModal={closeModal}  />
+          <HotelModal
+            hotel={hotel}
+            address={address}
+            rooms={rooms}
+            images={images}
+            closeModal={closeModal}
+          />
         </div>
       )}
     </div>

@@ -9,12 +9,9 @@ interface Props {
 
 
 const Card = ({style,children}:Props)=> {
-
-  const styles = `md:w-2/4  m-auto mt-10 p-5 ${style?.background} dark:${style?.drakMode} xl:flex justify-center  border rounded-lg shadow-lg `
-
   return (
     <>
-        <div className={styles}>
+        <div className= "md:w-2/4  m-auto mt-10 p-5  bg-slate-400  dark:bg-slate-600  xl:flex justify-center  border rounded-lg shadow-lg">
           {children}
         </div>
     </>

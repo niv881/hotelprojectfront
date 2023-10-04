@@ -6,8 +6,8 @@ import AuthContext from "../utils/UserContext";
 
 const isActive = (o: any) =>
   o.isActive
-    ? "bg-green-700 dark:bg-green-400 text-white dark:text-black p-1 px-3 mx-3 rounded-md font-medium"
-    : "text-black-300 hover:bg-green-700 dark:hover:bg-green-400 dark:hover:text-black dark:text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium";
+    ? "bg-slate-700 dark:bg-slate-400 text-white dark:text-black p-1 px-3 mx-3 rounded-md font-medium"
+    : "text-black-300 hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black dark:text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium";
 
 const Navbar = () => {
   const { toggleDarkMode } = useContext(DarkModeContext);
@@ -15,7 +15,7 @@ const Navbar = () => {
   const { isManager, logout, isLoggedIn } = useContext(AuthContext);
 
   return (
-    <nav className="flex justify-start items-center pe-10 mb-3 bg-green-300 p-2 dark:bg-green-800 ">
+    <nav className="flex justify-start items-center pe-10 mb-3 p-2 bg-slate-400  dark:bg-slate-800 ">
       <NavLink to={"/home"} className={isActive}>
         Home
       </NavLink>
@@ -32,7 +32,7 @@ const Navbar = () => {
         )}
         {isLoggedIn && (
           <button
-            className="text-black dark:text-white p-1 px-3 mx-3 rounded-md font-medium text-sm"
+            className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm"
             onClick={() => {
               logout();
             }}

@@ -53,7 +53,7 @@ const FormAddress = (props: any) => {
               </Field>
               <button
                 type="submit"
-                className="bg-green-700 dark:bg-green-100 dark:text-black dark:font-bold font-bold text-white w-16 h-10 ms-5 rounded-lg"
+                className="bg-gray-950 dark:bg-gray-300 text-gray-400 border dark:text-gray-950  border-gray-400 dark:border-gray-950 dark:font-bold font-bold w-16 h-10 ms-5 rounded-lg"
               >
                 GO!
               </button>
