@@ -9,7 +9,9 @@ const HotelModal = ({
   address,
   rooms,
   images,
-}: HotelResponeModalProps) => {
+  dateCheckIn,
+  dateCheckOut,
+}: HotelResponeModalProps & { dateCheckIn: string; dateCheckOut: string }) => {
   const [showModal, setShowModal] = useState(false);
 
   const openRoomModal = () => {
@@ -21,41 +23,53 @@ const HotelModal = ({
   };
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="modal">
-        <div className="modal-content">
+      <div className="modal p-2 md:p-4 lg:p-6">
+        <div className="modal-content shadow-lg rounded-lg overflow-hidden">
           <Button onClick={closeModal} text="Back" />
-          <section className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3 max-w-sm md:max-w-3xl bg-slate-300">
+
+          <section className="max-w-xs mx-auto bg-slate-300 md:max-w-md lg:max-w-4xl">
             {images.length > 0 && (
               <img
-                className="h-64 md:h-full object-contain mx-auto max-w-full"
+                className="h-48 md:h-64 md:w-full object-contain mx-auto max-w-full"
                 src={`data:image/png;base64,${images[0].image}`}
                 alt={hotel.name}
               />
             )}
             {!(images.length > 0) && (
               <img
-                className="h-64 md:h-full object-contain mx-auto"
-                src={`https://propertywiselaunceston.com.au/wp-content/themes/property-wise/images/no-image.png`}
-                alt="no "
+                className="h-48 md:h-64 md:w-full object-contain mx-auto"
+                src="https://propertywiselaunceston.com.au/wp-content/themes/property-wise/images/no-image.png"
+                alt="no"
               />
             )}
-            <div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8">
-              <p className="text-sm font-semibold uppercase tracking-widest">
+            <div className="p-2 md:p-4 text-center">
+              <p className="text-xs md:text-sm font-semibold uppercase tracking-widest">
                 {hotel.name}
               </p>
 
-              <h2 className="mt-6 font-black uppercase">
-                <span className="mt-2 block text-sm mb-5">{hotel.about}</span>
+              <h2 className="mt-2 md:mt-6 font-black uppercase text-sm md:text-lg">
+                <span className="mt-1 md:mt-2 block text-xs md:text-sm mb-3 md:mb-5">
+                  {hotel.about}
+                </span>
               </h2>
 
-<Button onClick={openRoomModal} text="To the hotel rooms press here" />
+              <Button
+                onClick={openRoomModal}
+                text="To the hotel rooms press here"
+              />
             </div>
           </section>
         </div>
       </div>
       {showModal && (
         <div>
-          <RoomCard closeRoomModal={closeRoomModal} rooms={rooms} />
+          <RoomCard
+            closeRoomModal={closeRoomModal}
+            rooms={rooms}
+            hotelName={hotel.name}
+            dateCheckIn={dateCheckIn} // Pass dateCheckIn as a prop
+            dateCheckOut={dateCheckOut} // Pass dateCheckOut as a prop
+          />
         </div>
       )}
     </div>

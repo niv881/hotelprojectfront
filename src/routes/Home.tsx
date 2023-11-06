@@ -1,15 +1,12 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Card from "../components/Card";
 import FormAddress from "../components/Form";
-import PageTitle from "../components/PageTitle";
 import DatepickerC from "../components/DatePickerC";
 import HotelContext from "../utils/HotelsContext";
-import { useNavigate } from "react-router-dom";
 import { HotelRespone } from "../utils/interfeces/@Types";
 import ErrorMsg from "../components/ErrorMsg";
 import Spinner from "../utils/Spinner";
 import HotelCard from "../components/HotelCard";
-import Footer from "../components/Footer";
 
 const style = { background: "bg-green-200", drakMode: "bg-green-400" };
 const errorMsg = "Error Occurred ! come back later 😄";
@@ -53,6 +50,8 @@ const Home = () => {
                       address={hotel.address}
                       rooms={hotel.rooms}
                       images={hotel.images}
+                      dateCheckIn={dateCheckIn} // Pass dateCheckIn as a prop
+                      dateCheckOut={dateCheckOut} // Pass dateCheckOut as a prop
                     />
                   </div>
                 ))}
@@ -64,7 +63,7 @@ const Home = () => {
         ) : (
           <Spinner />
         )}
-      <PageTitle title={`${dateCheckIn} , ${dateCheckOut}`} />
+      
     </>
   );
 };

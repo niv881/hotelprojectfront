@@ -40,6 +40,7 @@ export interface HotelRespone {
     phoneNumber: string;
     rating: number;
     about: string;
+
   };
   address: {
     city: string;
@@ -74,6 +75,7 @@ export interface HotelResponeModalProps {
 export interface RoomCardProps {
   closeRoomModal: () => void; // Define the new prop
   rooms: Room[]; // Assuming Room is defined somewhere in your code
+  hotelName :string;
 }
 
 export interface HotelData {
@@ -82,8 +84,13 @@ export interface HotelData {
 
 
 export interface BTNProps {
-  onClick: () => void; // Define the new prop
+  onClick: () => void; 
   text? : string
+}
+
+export interface BTNPaymentProp {
+  closePayment: () => void; 
+  price : string
 }
 
 export interface User {

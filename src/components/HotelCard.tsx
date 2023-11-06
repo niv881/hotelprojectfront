@@ -3,7 +3,7 @@ import Button from "../utils/Button";
 import { HotelRespone } from "../utils/interfeces/@Types";
 import HotelModal from "./HotelModal";
 
-const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
+const HotelCard = ({ hotel, address, rooms, images, dateCheckIn, dateCheckOut}: HotelRespone & { dateCheckIn: string, dateCheckOut: string } ) => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -105,6 +105,8 @@ const HotelCard = ({ hotel, address, rooms, images }: HotelRespone) => {
             rooms={rooms}
             images={images}
             closeModal={closeModal}
+            dateCheckIn={dateCheckIn} // Pass dateCheckIn as a prop
+            dateCheckOut={dateCheckOut} // Pass dateCheckOut as a prop
           />
         </div>
       )}

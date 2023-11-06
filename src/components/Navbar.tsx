@@ -32,7 +32,7 @@ const Navbar = () => {
         )}
         {isLoggedIn && (
           <button
-            className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm"
+            className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm hover:text-white hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black"
             onClick={() => {
               logout();
             }}

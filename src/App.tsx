@@ -9,13 +9,15 @@ import PostHotel from "./routes/PostHotel";
 import PostHotelImage from "./routes/PostHotelImage";
 import Register from "./routes/Register";
 import Footer from "./components/Footer";
+import { useContext } from "react";
+import DarkModeContext from "./utils/DarkModeContext";
+import PlaceOrder from "./routes/PlaceOrder";
 
 const App = () => {
-
-
-
+  const { darkMode } = useContext(DarkModeContext);
+  const appClass = darkMode ? 'App dark' : 'App';
   return (
-    <>
+    <div className={appClass}>
     <Navbar />
     <div className="min-h-screen">
       <Routes>
@@ -26,10 +28,11 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/postHotel" element={<PostHotel/>} />
         <Route path="/postImageForHotel" element={<PostHotelImage/>} />
+        <Route path="/room/:hotelName/:roomType/:checkIn/:checkOut/:price" element={<PlaceOrder/>} />
       </Routes>
       </div>
       <Footer/>
-    </>
+    </div>
   );
 };
 
