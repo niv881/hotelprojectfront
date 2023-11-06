@@ -15,7 +15,7 @@ const HotelModal = ({
   const openRoomModal = () => {
     setShowModal(true);
   };
-{/* <Button onClick={handleSubmit} text="GO!"/> */}
+
   const closeRoomModal = () => {
     setShowModal(false);
   };
