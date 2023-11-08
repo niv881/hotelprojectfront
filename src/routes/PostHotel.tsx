@@ -83,7 +83,6 @@ const PostHotel = () => {
             .then((response) => {
               const axiosResponse = response as AxiosResponse;
               if (axiosResponse.status === 201) {
-                // Check if the response status is OK (you may need to adjust this based on your API)
                 Swal.fire({
                   title: "Post successfully",
                   icon: "success",
@@ -93,7 +92,6 @@ const PostHotel = () => {
                   state: { hotelName: values.hotel.name },
                 });
               } else {
-                // Handle other status codes or error cases
                 Swal.fire({
                   title: "Post failed",
                   icon: "error",

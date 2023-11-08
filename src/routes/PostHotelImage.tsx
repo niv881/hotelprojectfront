@@ -31,7 +31,6 @@ const validationSchema = Yup.object().shape({
 const HotelForm = () => {
   const location = useLocation()
   const hotelName = location.state?.hotelName
-  console.log(hotelName)
   const initialValues: HotelFormValues = {
     hotelName: hotelName,
     image: "",

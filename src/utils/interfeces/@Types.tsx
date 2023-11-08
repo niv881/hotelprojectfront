@@ -90,7 +90,8 @@ export interface BTNProps {
 
 export interface BTNPaymentProp {
   closePayment: () => void; 
-  price : string
+  price : string;
+  order : OrderRequest;
 }
 
 export interface User {
@@ -130,4 +131,11 @@ export interface HotelFormValues {
   image: "";
  }
 
+ export interface OrderRequest {
+  checkIn : string;
+  checkOut : string;
+  hotelName : string;
+  roomType : string;
+  roomCapacity : number
+ }
 

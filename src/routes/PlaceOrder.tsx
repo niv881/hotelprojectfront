@@ -2,11 +2,15 @@ import  { useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../utils/Button";
 import Payment from "../components/Payment";
+import { OrderRequest } from "../utils/interfeces/@Types";
 
 const PlaceOrder = () => {
   const { hotelName, roomType, checkIn, checkOut,price } = useParams();
-
   const [showModal, setShowModal] = useState(false);
+
+  if (hotelName === undefined || roomType === undefined || checkIn === undefined || checkOut === undefined) {
+    return <div>Missing parameter(s)</div>;
+  }
 
   const openPayment = () => {
     setShowModal(true);
@@ -15,6 +19,13 @@ const PlaceOrder = () => {
   const closePayment = () => {
     setShowModal(false);
   };
+  const order : OrderRequest = {
+    hotelName : hotelName,
+    roomType :roomType,
+    checkIn : checkIn,
+    checkOut : checkOut,
+    roomCapacity : 1
+  }
 
   return (
     <div className="flex justify-center" >
@@ -43,7 +54,7 @@ const PlaceOrder = () => {
       </div>
       {showModal && price && (
         <div>
-          <Payment closePayment={closePayment} price={price}/>
+          <Payment closePayment={closePayment} price={price} order={order}/>
         </div>
       )}
     </div>

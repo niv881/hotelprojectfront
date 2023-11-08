@@ -35,12 +35,24 @@ const DatepickerC = (props : any) => {
 
 	const [show, setShow] = useState (false)
 	const handleChange = (selectedDate : Date) => {
-    // console.log(props.whatever)
-		props.date(`${selectedDate.getFullYear()}-${selectedDate.getMonth()+1}-${selectedDate.getDate()}`)
+    const day = formatWithLeadingZero(selectedDate.getDate())
+		props.date(`${selectedDate.getFullYear()}-${selectedDate.getMonth()+1}-${day}`)
 	}
 	const handleClose = (state : boolean) => {
 		setShow(state)
 	}
+
+  function formatWithLeadingZero(day : number) {
+    if (day >= 1 && day <= 9) {
+      // If the number is between 1 and 9, add a leading zero
+      return '0' + day;
+    } else {
+      // If the number is 10 or greater, no leading zero is added
+      return day
+    }
+  }
+
+
 
 	return (
 		<div className='m-3 '>
