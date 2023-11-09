@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import DarkModeContext from "../utils/DarkModeContext";
 import ToggleToDarkMode from "../utils/ToggleToDarkMode";
 import AuthContext from "../utils/UserContext";
@@ -10,6 +10,7 @@ const isActive = (o: any) =>
     : "text-black-300 hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black dark:text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium";
 
 const Navbar = () => {
+  const nav = useNavigate()
   const { toggleDarkMode } = useContext(DarkModeContext);
 
   const { isManager, logout, isLoggedIn } = useContext(AuthContext);
@@ -31,14 +32,20 @@ const Navbar = () => {
           </NavLink>
         )}
         {isLoggedIn && (
-          <button
-            className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm hover:text-white hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black"
-            onClick={() => {
-              logout();
-            }}
-          >
-            LogOut
-          </button>
+          <div>
+            <button
+              className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm hover:text-white hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black"
+              onClick={() => {
+                logout();
+                nav("/")
+              }}
+            >
+              LogOut
+            </button>
+            <NavLink className={isActive} to="/myOrders">
+              My Orders
+            </NavLink>
+          </div>
         )}
         {!isLoggedIn && (
           <NavLink className={isActive} to="/login">
@@ -51,7 +58,7 @@ const Navbar = () => {
           Register
         </NavLink>
       )}
-  <ToggleToDarkMode onClick={toggleDarkMode} />
+      <ToggleToDarkMode onClick={toggleDarkMode} />
     </nav>
   );
 };

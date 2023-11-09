@@ -1,7 +1,8 @@
 import axios from "axios"
-import { string } from "yup"
+import { useNavigate } from "react-router-dom"
 
 const baseUrl = 'http://localhost:8080/auth'
+
 
 export const register = (username:string,email:string,password:string) =>{
 

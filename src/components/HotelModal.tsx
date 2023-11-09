@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { HotelResponeModalProps } from "../utils/interfeces/@Types";
 import RoomCard from "./RoomCard";
 import Button from "../utils/Button";
 import { useNavigate } from "react-router-dom";
+import AuthContext from "../utils/UserContext";
 
 const HotelModal = ({
   closeModal,
@@ -24,8 +25,7 @@ const HotelModal = ({
     setShowModal(false);
   };
 
-  const isUserLoggedIn = localStorage.getItem("user");
-  console.log(isUserLoggedIn);
+  const {isLoggedIn} = useContext(AuthContext);
 
   // Redirect function to Register page if user is not logged in
   const redirectToRegister = () => {
@@ -70,7 +70,7 @@ const HotelModal = ({
                 </span>
               </h2>
 
-              {isUserLoggedIn ? (
+              {isLoggedIn ? (
                 <Button
                   onClick={openRoomModal}
                   text="To the hotel rooms press here"

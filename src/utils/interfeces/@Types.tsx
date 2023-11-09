@@ -137,5 +137,30 @@ export interface HotelFormValues {
   hotelName : string;
   roomType : string;
   roomCapacity : number
+  userName : String
  }
 
+ export interface Order {
+  checkIn: string;
+  checkOut: string;
+  roomCapacity: number;
+  hotel: {
+    id: number;
+    name: string;
+    about: string;
+    email : string;
+    phoneNumber : string;
+    rating : number
+  };
+  room: {
+    id: number;
+    type: string;
+    price: number;
+    capacity: number;
+  };
+  user: {
+    id: number;
+    username: string;
+    email: string;
+  };
+}

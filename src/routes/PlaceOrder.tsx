@@ -7,8 +7,13 @@ import { OrderRequest } from "../utils/interfeces/@Types";
 const PlaceOrder = () => {
   const { hotelName, roomType, checkIn, checkOut,price } = useParams();
   const [showModal, setShowModal] = useState(false);
+  const userData = localStorage.getItem("user") ?? `{token:''}`;
+  //parse
+  const user = JSON.parse(userData);
+  const username = user.username
+  
 
-  if (hotelName === undefined || roomType === undefined || checkIn === undefined || checkOut === undefined) {
+  if (hotelName === undefined || roomType === undefined || checkIn === undefined || checkOut === undefined || username === undefined) {
     return <div>Missing parameter(s)</div>;
   }
 
@@ -24,7 +29,8 @@ const PlaceOrder = () => {
     roomType :roomType,
     checkIn : checkIn,
     checkOut : checkOut,
-    roomCapacity : 1
+    roomCapacity : 1,
+    userName : username
   }
 
   return (
