@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HotelResponeModalProps } from "../utils/interfeces/@Types";
 import RoomCard from "./RoomCard";
 import Button from "../utils/Button";
+import { useNavigate } from "react-router-dom";
 
 const HotelModal = ({
   closeModal,
@@ -12,6 +13,7 @@ const HotelModal = ({
   dateCheckIn,
   dateCheckOut,
 }: HotelResponeModalProps & { dateCheckIn: string; dateCheckOut: string }) => {
+  const nav = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
   const openRoomModal = () => {
@@ -21,6 +23,21 @@ const HotelModal = ({
   const closeRoomModal = () => {
     setShowModal(false);
   };
+
+  const isUserLoggedIn = localStorage.getItem("user");
+  console.log(isUserLoggedIn);
+
+  // Redirect function to Register page if user is not logged in
+  const redirectToRegister = () => {
+    // You can use a routing library or window.location.href to redirect to the Register page
+    nav("/register"); // Update this with your Register page path
+  };
+
+  const redirectToLogin = () => {
+    // You can use a routing library or window.location.href to redirect to the Register page
+    nav("/login"); // Update this with your Register page path
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="modal p-2 md:p-4 lg:p-6">
@@ -53,10 +70,20 @@ const HotelModal = ({
                 </span>
               </h2>
 
-              <Button
-                onClick={openRoomModal}
-                text="To the hotel rooms press here"
-              />
+              {isUserLoggedIn ? (
+                <Button
+                  onClick={openRoomModal}
+                  text="To the hotel rooms press here"
+                />
+              ) : (
+                <div>
+                  <p className="mb-4">please register or login before ordering</p>
+                  <div className="flex justify-evenly">
+                    <Button onClick={redirectToRegister} text="Register" />
+                    <Button onClick={redirectToLogin} text="Login" />
+                  </div>
+                </div>
+              )}
             </div>
           </section>
         </div>
