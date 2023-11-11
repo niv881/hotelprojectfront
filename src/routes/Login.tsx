@@ -47,7 +47,7 @@ const Login = () => {
               });
               const data = localStorage.getItem('user')
               const user = JSON.parse(data || '{}')
-              login(username,res.data.jwt,user.role.some((role: { authority: string; })=> role.authority === 'ROLE_MANAGER'))
+              login(username,res.data.jwt,user.role.some((role: { authority: string; })=> role.authority === 'ROLE_MANAGER'),user.role.some((role: { authority: string; })=> role.authority === 'ROLE_ADMIN'))
               nav("/home");
             }else if(res.response){
             Swal.fire({

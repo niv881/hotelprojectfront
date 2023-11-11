@@ -6,14 +6,16 @@ interface AuthContextState{
     token?:string
     username?:string
     isManager:boolean
-    login : (username:string, token : string,manager:boolean)=>void
+    isAdmin:boolean
+    login : (username:string, token : string,manager:boolean,admin:boolean)=>void
     logout: ()=>void
 }
 
 const initialState = {
   isLoggedIn: false,
   isManager :false,
-  login: (username: string, token: string,manager:boolean) => {},
+  isAdmin :false,
+  login: (username: string, token: string,manager:boolean,admin:boolean) => {},
   logout: () => {}
 }
 const AuthContext = createContext<AuthContextState>(initialState);
@@ -24,6 +26,7 @@ export const AuthContextProvider = ({children} : {children:ReactNode}) => {
     const [username,setUsername] = useState<string>()
     const [token,setToke] = useState<string>()
     const [isManager,setIsManager] = useState(false)
+    const [isAdmin,setIsAdmin] = useState(false)
 
     useEffect(() => {
       const data = localStorage.getItem("user")
@@ -33,6 +36,7 @@ export const AuthContextProvider = ({children} : {children:ReactNode}) => {
         setToke(user.token)
         setUsername(user.username)
         setIsManager(user.role.some((role: { authority: string; })=> role.authority === 'ROLE_MANAGER'))
+        setIsAdmin(user.role.some((role: { authority: string; })=> role.authority === 'ROLE_ADMIN'))
       }
     }, [])
     
@@ -41,17 +45,20 @@ const auth = {
     token,
     username,
     isManager,
-    login: (username: string, token: string,manager : boolean) => {
+    isAdmin,
+    login: (username: string, token: string,manager : boolean,admin : boolean) => {
         setUsername(username)
         setToke(token)
         setIsLoggedIn(true)
         setIsManager(manager)
+        setIsAdmin(admin)
     },
     logout: () => {
         setUsername(undefined)
         setToke(undefined)
         setIsLoggedIn(false)
         setIsManager(false)
+        setIsAdmin(false)
         localStorage.removeItem('user')
     }
 }

@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import DarkModeContext from "../utils/DarkModeContext";
 import ToggleToDarkMode from "../utils/ToggleToDarkMode";
 import AuthContext from "../utils/UserContext";
+import HotelContext from "../utils/HotelsContext";
 
 const isActive = (o: any) =>
   o.isActive
@@ -13,7 +14,8 @@ const Navbar = () => {
   const nav = useNavigate()
   const { toggleDarkMode } = useContext(DarkModeContext);
 
-  const { isManager, logout, isLoggedIn } = useContext(AuthContext);
+  const { isManager, logout, isLoggedIn, isAdmin } = useContext(AuthContext);
+
 
   return (
     <nav className="flex justify-start items-center pe-10 mb-3 p-2 bg-slate-400  dark:bg-slate-800 ">
@@ -30,6 +32,11 @@ const Navbar = () => {
           <NavLink className={isActive} to="/postHotel">
             Post New Hotel
           </NavLink>
+        )}
+        {isAdmin && (
+                    <NavLink className={isActive} to="/registerManager">
+                    Register New Manager
+                  </NavLink>
         )}
         {isLoggedIn && (
           <div>

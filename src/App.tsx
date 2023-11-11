@@ -13,6 +13,7 @@ import { useContext } from "react";
 import DarkModeContext from "./utils/DarkModeContext";
 import PlaceOrder from "./routes/PlaceOrder";
 import MyOrders from "./routes/MyOrders";
+import RegisterManager from "./routes/RegisterManager";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/registerManager" element={<RegisterManager />} />
         <Route path="/login" element={<Login />} />
         <Route path="/postHotel" element={<PostHotel/>} />
         <Route path="/postImageForHotel" element={<PostHotelImage/>} />

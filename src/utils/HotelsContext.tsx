@@ -46,6 +46,7 @@ export const HotelContextProvider = ({ children }: { children: ReactNode }) => {
 
       if (Array.isArray(fetchedHotels)) {
         setHotels(fetchedHotels);
+        
       } else {
         console.error("Invalid hotel data format:", fetchedHotels);
       }

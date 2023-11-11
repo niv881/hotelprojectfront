@@ -53,8 +53,8 @@ const Home = () => {
                       address={hotel.address}
                       rooms={hotel.rooms}
                       images={hotel.images}
-                      dateCheckIn={dateCheckIn} // Pass dateCheckIn as a prop
-                      dateCheckOut={dateCheckOut} // Pass dateCheckOut as a prop
+                      dateCheckIn={dateCheckIn} 
+                      dateCheckOut={dateCheckOut} 
                     />
                   </div>
                 ))}
