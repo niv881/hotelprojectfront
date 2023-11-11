@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Card from "../components/Card";
 import FormAddress from "../components/Form";
 import DatepickerC from "../components/DatePickerC";
@@ -12,10 +12,11 @@ const style = { background: "bg-green-200", drakMode: "bg-green-400" };
 const errorMsg = "Error Occurred ! come back later 😄";
 
 const Home = () => {
+
   const { setInputAddress, hotels, time } = useContext(HotelContext);
   const [dateCheckIn, setDateChackIn] = useState("");
   const [dateCheckOut, setDateCheckOut] = useState("");
-
+  
   const setCheckIn = (p: string) => {
     setDateChackIn(p);
   };
@@ -30,6 +31,8 @@ const Home = () => {
       <p>No valid !!</p>;
     }
   };
+  
+
 
   return (
     <>

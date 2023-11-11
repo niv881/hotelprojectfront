@@ -144,13 +144,14 @@ export interface HotelFormValues {
   checkIn: string;
   checkOut: string;
   roomCapacity: number;
+  orderNumber : string;
   hotel: {
     id: number;
     name: string;
     about: string;
-    email : string;
-    phoneNumber : string;
-    rating : number
+    email: string;
+    phoneNumber: string;
+    rating: number;
   };
   room: {
     id: number;
@@ -163,4 +164,10 @@ export interface HotelFormValues {
     username: string;
     email: string;
   };
+}
+
+export interface DeleteOrder {
+  orderNum: string;
+  roomType: string;
+  hotelName: string;
 }

@@ -17,7 +17,7 @@ const Payment = ({ closePayment, price, order }: BTNPaymentProp) => {
     cus_zip: "",
     cus_card: "",
   });
-
+  console.log(order)
   const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData({
