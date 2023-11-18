@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import DarkModeContext from "../utils/DarkModeContext";
 import ToggleToDarkMode from "../utils/ToggleToDarkMode";
 import AuthContext from "../utils/UserContext";
-import HotelContext from "../utils/HotelsContext";
+import HamburgerNavBar from "./HamburgerNavBar";
 
 const isActive = (o: any) =>
   o.isActive
@@ -11,11 +11,10 @@ const isActive = (o: any) =>
     : "text-black-300 hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black dark:text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium";
 
 const Navbar = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const { toggleDarkMode } = useContext(DarkModeContext);
 
   const { isManager, logout, isLoggedIn, isAdmin } = useContext(AuthContext);
-
 
   return (
     <nav className="flex justify-start items-center pe-10 mb-3 p-2 bg-slate-400  dark:bg-slate-800 ">
@@ -27,6 +26,10 @@ const Navbar = () => {
       </NavLink>
 
       <div className="flex-1"></div>
+      <div className="flex items-center me-2">
+        <HamburgerNavBar />
+      </div>
+
       <div className="hidden sm:flex sm:items-center">
         {isManager && (
           <NavLink className={isActive} to="/postHotel">
@@ -34,9 +37,9 @@ const Navbar = () => {
           </NavLink>
         )}
         {isAdmin && (
-                    <NavLink className={isActive} to="/registerManager">
-                    Register New Manager
-                  </NavLink>
+          <NavLink className={isActive} to="/registerManager">
+            Register New Manager
+          </NavLink>
         )}
         {isLoggedIn && (
           <div>
@@ -44,7 +47,7 @@ const Navbar = () => {
               className="text-slate-800 dark:text-slate-300 p-1 px-3 mx-3 rounded-md font-medium text-sm hover:text-white hover:bg-slate-700 dark:hover:bg-slate-400 dark:hover:text-black"
               onClick={() => {
                 logout();
-                nav("/")
+                nav("/");
               }}
             >
               LogOut
@@ -59,12 +62,13 @@ const Navbar = () => {
             Login
           </NavLink>
         )}
+        {!isLoggedIn && (
+          <NavLink className={isActive} to="/register">
+            Register
+          </NavLink>
+        )}
       </div>
-      {!isLoggedIn && (
-        <NavLink className={isActive} to="/register">
-          Register
-        </NavLink>
-      )}
+
       <ToggleToDarkMode onClick={toggleDarkMode} />
     </nav>
   );

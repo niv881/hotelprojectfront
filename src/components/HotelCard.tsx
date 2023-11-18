@@ -21,7 +21,7 @@ const HotelCard = ({ hotel, address, rooms, images, dateCheckIn, dateCheckOut}: 
     >
       {images.length > 0 && (
         <img
-          className="p-8 rounded-t-lg"
+          className="p-8 rounded-t-lg w-80 h-64"
           src={`data:image/png;base64,${images[0].image}`}
           alt={hotel.name}
         />

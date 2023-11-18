@@ -4,7 +4,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import hotelManagmentService from "../services/hotelManagment-service";
 import { address } from "../utils/interfeces/@Types";
 
-const FormAddress = (props: any) => {
+const FormAddress = (props: { address: (address: string) => void; setCityOptions: (cityOptions: string[]) => void }) => {
   const validationSchema = Yup.object({
     address: Yup.string().min(2).required(),
   });
@@ -19,6 +19,7 @@ const FormAddress = (props: any) => {
     hotelManagmentService.GetInputAddress().then((res: address[]) => {
       const uniqueCities = Array.from(new Set(res.map((item) => item.city)));
       setCityOptions(uniqueCities);
+      props.setCityOptions(uniqueCities);
     }).catch((error: string)=>{
        setCityOptions([`Sorry we have a problem. No option to choose.. `]);
     });
