@@ -30,7 +30,7 @@ const Navbar = () => {
         <HamburgerNavBar />
       </div>
 
-      <div className="hidden sm:flex sm:items-center">
+      <div className="hidden lg:flex sm:items-center">
         {isManager && (
           <NavLink className={isActive} to="/postHotel">
             Post New Hotel

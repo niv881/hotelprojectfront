@@ -92,7 +92,7 @@ const HotelCard = ({ hotel, address, rooms, images, dateCheckIn, dateCheckOut}: 
         </div>
         <div className="flex items-center justify-between">
           <span className="text-3xl font-bold text-gray-900 dark:text-white">
-            {rooms[0].price.toLocaleString()}
+            {rooms[0].price.toLocaleString()}$
           </span>
           <Button onClick={openModal} text="Make Reservations" />
         </div>

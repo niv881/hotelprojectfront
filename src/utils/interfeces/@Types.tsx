@@ -90,7 +90,7 @@ export interface BTNProps {
 
 export interface BTNPaymentProp {
   closePayment: () => void; 
-  price : string;
+  price : number;
   order : OrderRequest;
 }
 

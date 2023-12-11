@@ -1,18 +1,35 @@
-import { useContext, useState } from "react";
-import AuthContext from "../utils/UserContext";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import AuthContext from '../utils/UserContext';
 
 const HamburgerNavBar = () => {
   const nav = useNavigate();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const { isManager, logout, isLoggedIn, isAdmin } = useContext(AuthContext);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="relative">
+    <div className="relative" ref={menuRef}>
       <button
         onClick={toggleMenu}
         className="lg:hidden text-slate-800 dark:text-slate-300"
@@ -34,7 +51,7 @@ const HamburgerNavBar = () => {
       </button>
       <div
         className={`lg:hidden absolute right-0 top-12 bg-white p-4 rounded-md shadow-md z-10 ${
-          isMenuOpen ? "" : "hidden"
+          isMenuOpen ? '' : 'hidden'
         }`}
       >
         <ul className="flex flex-col space-y-2">
@@ -67,7 +84,7 @@ const HamburgerNavBar = () => {
                 className="text-slate-800 dark:text-slate-300 whitespace-nowrap text-start "
                 onClick={() => {
                   logout();
-                  nav("/");
+                  nav('/');
                 }}
               >
                 LogOut
@@ -84,7 +101,7 @@ const HamburgerNavBar = () => {
           )}
           {!isLoggedIn && (
             <NavLink
-              className="whitespace-nowrapl text-slate-800 dark:text-slate-300"
+              className="whitespace-nowrap text-slate-800 dark:text-slate-300"
               to="/register"
             >
               Register

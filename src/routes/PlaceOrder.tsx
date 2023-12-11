@@ -33,6 +33,18 @@ const PlaceOrder = () => {
     userName : username
   }
 
+  const checkInDate = new Date(checkIn);
+  const checkOutDate = new Date(checkOut);
+
+  // Calculate the time difference in milliseconds
+  const timeDifference = checkOutDate.getTime() - checkInDate.getTime();
+
+  // Convert the time difference to days
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+  const totalPrice = daysDifference * Number(price);
+
+
   return (
     <div className="flex justify-center" >
       <div className=" w-full h-2/3 md:w-3/4 flex justify-center relative group cursor-pointer group overflow-hidden  text-gray-50  rounded-2xl hover:duration-700 duration-700">
@@ -51,6 +63,9 @@ const PlaceOrder = () => {
           <p className="text-neutral-800">
            Price :  {price}
           </p>
+          <p className="text-neutral-800">
+           totla :  {totalPrice}
+          </p>
           <div >
           <Button onClick={openPayment} text="Move To Payment"/>
           </div>
@@ -60,7 +75,7 @@ const PlaceOrder = () => {
       </div>
       {showModal && price && (
         <div>
-          <Payment closePayment={closePayment} price={price} order={order}/>
+          <Payment closePayment={closePayment} price={totalPrice} order={order}/>
         </div>
       )}
     </div>
