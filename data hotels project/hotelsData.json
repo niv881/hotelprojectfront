@@ -1,0 +1,872 @@
+[
+  {
+    "hotel": {
+      "name": "Luxury Oasis Hotel",
+      "about": "An oasis of luxury and tranquility with exquisite services.",
+      "email": "info@luxuryoasis.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Palm Jumeirah",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Royal Suite",
+        "price": 500.0,
+        "capacity": 4
+      },
+      {
+        "type": "Presidential Villa",
+        "price": 800.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Luxury_Oasis_Hotel.jpg",
+        "caption": "Luxury Oasis Exterior"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Palm View Resort",
+      "about": "Experience ultimate luxury and breathtaking views.",
+      "email": "info@palmviewresort.com",
+      "phoneNumber": "222-333-4444"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Jumeirah Beach",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Oceanfront Suite",
+        "price": 700.0,
+        "capacity": 3
+      },
+      {
+        "type": "Deluxe Beach Villa",
+        "price": 900.0,
+        "capacity": 5
+      },
+      {
+        "type": "Deluxe Beach Villa Ocean view",
+        "price": 1200.0,
+        "capacity": 5
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Palm_View_Resort.jpg",
+        "caption": "Serenity by the Beach"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Golden Sands Palace",
+      "about": "A regal experience in the heart of Dubai's opulence.",
+      "email": "info@goldensandspalace.com",
+      "phoneNumber": "333-444-5555"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Sheikh Zayed Road",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Royal Residency",
+        "price": 600.0,
+        "capacity": 4
+      },
+      {
+        "type": "Imperial Suite",
+        "price": 1000.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Golden_Sands_Palace.jpg",
+        "caption": "Palatial Opulence"
+      }
+    ]
+  }, 
+  {
+    "hotel": {
+      "name": "Sky High Retreat",
+      "about": "Elevate your stay with unmatched luxury and skyline views.",
+      "email": "info@skyhighretreat.com",
+      "phoneNumber": "555-666-7777"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Downtown Boulevard",
+      "streetNumber": "101"
+    },
+    "rooms": [
+      {
+        "type": "Skyline Oasis",
+        "price": 550.0,
+        "capacity": 3
+      },
+      {
+        "type": "High-Rise Penthouse",
+        "price": 850.0,
+        "capacity": 5
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Sky_High_Retreat.jpg",
+        "caption": "Aerial Tranquility"
+      }
+    ]
+  },   
+  {
+    "hotel": {
+      "name": "Desert Mirage Resort",
+      "about": "Escape to luxury amidst the mystical beauty of the desert.",
+      "email": "info@desertmirageresort.com",
+      "phoneNumber": "777-888-9999"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Arabian Desert Road",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Dune View Suite",
+        "price": 650.0,
+        "capacity": 3
+      },
+      {
+        "type": "Royal Desert Villa",
+        "price": 1200.0,
+        "capacity": 8
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Desert_Mirage_Resort.jpg",
+        "caption": "Sands of Serenity"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "City Lights Grand Hotel",
+      "about": "Immerse yourself in the glamour of city lights and luxury.",
+      "email": "info@citylightsgrand.com",
+      "phoneNumber": "987-654-3210"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "street": "Business Bay",
+      "streetNumber": "123"
+    },
+    "rooms": [
+      {
+        "type": "Executive Skyline Suite",
+        "price": 750.0,
+        "capacity": 4
+      },
+      {
+        "type": "Presidential Tower",
+        "price": 1100.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "City_Lights_Grand_Hotel.jpg",
+        "caption": "Skyscraper Splendor"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "Grand Plaza Hotel",
+      "about": "A grand destination with unmatched elegance and opulence.",
+      "email": "info@grandplaza.com",
+      "phoneNumber": "222-333-4444"
+    },
+    "address": {
+      "country": "United States",
+      "city": "New York",
+      "street": "Fifth Avenue",
+      "streetNumber": "123"
+    },
+    "rooms": [
+      {
+        "type": "Grand Suite",
+        "price": 600.0,
+        "capacity": 5
+      },
+      {
+        "type": "Executive Penthouse",
+        "price": 1000.0,
+        "capacity": 8
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Grand_Plaza_Hotel.jpg",
+        "caption": "Grand Plaza Exterior"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Metropolitan Tower Hotel",
+      "about": "A blend of modern luxury and timeless sophistication.",
+      "email": "info@metropolitantower.com",
+      "phoneNumber": "333-444-5555"
+    },
+    "address": {
+      "country": "United States",
+      "city": "New York",
+      "street": "Central Park West",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Park View Suite",
+        "price": 700.0,
+        "capacity": 4
+      },
+      {
+        "type": "Presidential Penthouse",
+        "price": 1200.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Metropolitan_Tower_Hotel.jpg",
+        "caption": "Central Park Elegance"
+      }
+    ]
+  }, 
+  {
+    "hotel": {
+      "name": "Times Square Grand Hotel",
+      "about": "Experience the vibrancy of Times Square from your luxurious retreat.",
+      "email": "info@timessquaregrand.com",
+      "phoneNumber": "555-666-7777"
+    },
+    "address": {
+      "country": "United States",
+      "city": "New York",
+      "street": "Broadway",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "City View Loft",
+        "price": 600.0,
+        "capacity": 3
+      },
+      {
+        "type": "Broadway Suite",
+        "price": 900.0,
+        "capacity": 5
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Times_Square_Grand_Hotel.jpg",
+        "caption": "Broadway Lights Extravaganza"
+      }
+    ]
+  },   
+  {
+    "hotel": {
+      "name": "Riverside Luxury Inn",
+      "about": "Unwind in luxury overlooking the scenic Hudson River.",
+      "email": "info@riversideluxury.com",
+      "phoneNumber": "777-888-9999"
+    },
+    "address": {
+      "country": "United States",
+      "city": "New York",
+      "street": "Riverside Drive",
+      "streetNumber": "101"
+    },
+    "rooms": [
+      {
+        "type": "River View Suite",
+        "price": 550.0,
+        "capacity": 3
+      },
+      {
+        "type": "Hudson Loft",
+        "price": 800.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Riverside_Luxury_Inn.jpg",
+        "caption": "Riverside Serenity"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "Empire State Elegance Hotel",
+      "about": "Bask in the grandeur of the Empire State Building from your suite.",
+      "email": "info@empirestateelegance.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "United States",
+      "city": "New York",
+      "street": "34th Street",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Skyline View Suite",
+        "price": 750.0,
+        "capacity": 4
+      },
+      {
+        "type": "Empire Suite",
+        "price": 1100.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Empire_State_Elegance_Hotel.jpg",
+        "caption": "Empire State Splendor"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "Oceanfront Paradise Resort",
+      "about": "Experience paradise on the shores of crystal-clear waters.",
+      "email": "info@paradiseresort.com",
+      "phoneNumber": "333-444-5555"
+    },
+    "address": {
+      "country": "Maldives",
+      "city": "Male",
+      "street": "Beachfront Boulevard",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Overwater Bungalow",
+        "price": 700.0,
+        "capacity": 2
+      },
+      {
+        "type": "Beachfront Villa",
+        "price": 550.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Oceanfront_Paradise_Resort.jpg",
+        "caption": "Paradise Resort View"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Tropical Haven Retreat",
+      "about": "Discover the ultimate tropical haven in the heart of Male.",
+      "email": "info@tropicalhaven.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "Maldives",
+      "city": "Male",
+      "street": "Island Paradise Lane",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Island View Suite",
+        "price": 600.0,
+        "capacity": 3
+      },
+      {
+        "type": "Oceanfront Bungalow",
+        "price": 900.0,
+        "capacity": 5
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Tropical_Haven_Retreat.jpg",
+        "caption": "Island Serenity"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "Sunset Bliss Resort",
+      "about": "Experience pure bliss with mesmerizing sunset views and tropical vibes.",
+      "email": "info@sunsetbliss.com",
+      "phoneNumber": "555-666-7777"
+    },
+    "address": {
+      "country": "Maldives",
+      "city": "Male",
+      "street": "Sunset Boulevard",
+      "streetNumber": "123"
+    },
+    "rooms": [
+      {
+        "type": "Sunset Suite",
+        "price": 550.0,
+        "capacity": 3
+      },
+      {
+        "type": "Private Pool Villa",
+        "price": 900.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Sunset_Bliss_Resort.jpg",
+        "caption": "Tropical Paradise"
+      }
+    ]
+  },  
+  {
+    "hotel": {
+      "name": "Skyline View Hotel",
+      "about": "Elevate your stay with breathtaking views from the city skyline.",
+      "email": "info@skylineview.com",
+      "phoneNumber": "555-666-7777"
+    },
+    "address": {
+      "country": "Singapore",
+      "city": "Singapore",
+      "street": "Marina Bay",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Skyline Suite",
+        "price": 450.0,
+        "capacity": 3
+      },
+      {
+        "type": "Executive Loft",
+        "price": 700.0,
+        "capacity": 5
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Skyline_View_Hotel.jpg",
+        "caption": "Skyline View at Dusk"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Mountain Retreat Lodge",
+      "about": "Embrace the tranquility of the mountains in a cozy lodge.",
+      "email": "info@mountainretreat.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "Canada",
+      "city": "Banff",
+      "street": "Mountain View Trail",
+      "streetNumber": "101"
+    },
+    "rooms": [
+      {
+        "type": "Log Cabin",
+        "price": 250.0,
+        "capacity": 2
+      },
+      {
+        "type": "Alpine Suite",
+        "price": 400.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Mountain_Retreat_Lodge.jpg",
+        "caption": "Mountain Lodge Serenity"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Urban Chic Boutique Hotel",
+      "about": "Discover chic urban living with modern aesthetics and luxury.",
+      "email": "info@urbanchic.com",
+      "phoneNumber": "444-555-6666"
+    },
+    "address": {
+      "country": "USA",
+      "city": "New York",
+      "street": "Fashion Avenue",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "City View Loft",
+        "price": 600.0,
+        "capacity": 3
+      },
+      {
+        "type": "Penthouse Suite",
+        "price": 900.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Urban_Chic_Boutique_Hotel.jpg",
+        "caption": "Chic Urban Retreat"
+      }
+    ]
+  },
+    {
+    "hotel": {
+      "name": "Coastal Paradise Resort",
+      "about": "Escape to a coastal paradise with breathtaking ocean views.",
+      "email": "info@coastalparadise.com",
+      "phoneNumber": "777-888-9999"
+    },
+    "address": {
+      "country": "Greece",
+      "city": "Santorini",
+      "street": "Cliffside Avenue",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Ocean View Suite",
+        "price": 600.0,
+        "capacity": 2
+      },
+      {
+        "type": "Beachfront Villa",
+        "price": 800.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Coastal_Paradise_Resort.jpg",
+        "caption": "Santorini Sunset Views"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Rustic Vineyard Inn",
+      "about": "Experience the charm of a rustic inn surrounded by vineyards.",
+      "email": "info@rusticvineyard.com",
+      "phoneNumber": "123-456-7890"
+    },
+    "address": {
+      "country": "Italy",
+      "city": "Tuscany",
+      "street": "Vineyard Lane",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Vineyard Suite",
+        "price": 400.0,
+        "capacity": 3
+      },
+      {
+        "type": "Countryside Cottage",
+        "price": 300.0,
+        "capacity": 2
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Rustic_Vineyard_Inn.jpg",
+        "caption": "Tuscan Countryside Charm"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Modern Skyline Hotel",
+      "about": "Enjoy luxury with a view in a modern hotel towering over the city.",
+      "email": "info@modernskyline.com",
+      "phoneNumber": "987-654-3210"
+    },
+    "address": {
+      "country": "China",
+      "city": "Shanghai",
+      "street": "Skyline Boulevard",
+      "streetNumber": "101"
+    },
+    "rooms": [
+      {
+        "type": "Skyline Suite",
+        "price": 700.0,
+        "capacity": 2
+      },
+      {
+        "type": "Executive Sky Loft",
+        "price": 1000.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Modern_Skyline_Hotel.jpg",
+        "caption": "Cityscape Elegance"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Historic Manor House",
+      "about": "Step back in time at a historic manor house surrounded by lush gardens.",
+      "email": "info@historicmanor.com",
+      "phoneNumber": "111-333-5555"
+    },
+    "address": {
+      "country": "England",
+      "city": "Cotswolds",
+      "street": "Manor Lane",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Manor Suite",
+        "price": 500.0,
+        "capacity": 2
+      },
+      {
+        "type": "Garden View Room",
+        "price": 300.0,
+        "capacity": 3
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Historic_Manor_House.jpg",
+        "caption": "Timeless Elegance"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Tropical Rainforest Lodge",
+      "about": "Immerse yourself in the beauty of a tropical rainforest retreat.",
+      "email": "info@tropicalrainforest.com",
+      "phoneNumber": "555-777-9999"
+    },
+    "address": {
+      "country": "Costa Rica",
+      "city": "Monteverde",
+      "street": "Rainforest Trail",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Canopy Suite",
+        "price": 600.0,
+        "capacity": 2
+      },
+      {
+        "type": "Jungle Bungalow",
+        "price": 400.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Tropical_Rainforest_Lodge.jpg",
+        "caption": "Nature's Paradise"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Sunset Bliss Resort",
+      "about": "Experience pure bliss with mesmerizing sunset views and tropical vibes.",
+      "email": "info@sunsetbliss.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "Thailand",
+      "city": "Phuket",
+      "street": "Beachfront Avenue",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Sunset Suite",
+        "price": 550.0,
+        "capacity": 3
+      },
+      {
+        "type": "Private Pool Villa",
+        "price": 900.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Sunset_Bliss_Resort.jpg",
+        "caption": "Tropical Paradise at Dusk"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Alpine Chalet Retreat",
+      "about": "Escape to a cozy alpine chalet for a perfect winter getaway.",
+      "email": "info@alpineretreat.com",
+      "phoneNumber": "222-333-4444"
+    },
+    "address": {
+      "country": "Switzerland",
+      "city": "Zermatt",
+      "street": "Snowy Slope Lane",
+      "streetNumber": "123"
+    },
+    "rooms": [
+      {
+        "type": "Snow View Chalet",
+        "price": 700.0,
+        "capacity": 4
+      },
+      {
+        "type": "Fireplace Suite",
+        "price": 1000.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Alpine_Chalet_Retreat.jpg",
+        "caption": "Winter Wonderland Retreat"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Desert Oasis Resort",
+      "about": "Discover luxury in the midst of a serene desert oasis.",
+      "email": "info@desertoasis.com",
+      "phoneNumber": "333-444-5555"
+    },
+    "address": {
+      "country": "United Arab Emirates",
+      "city": "Abu Dhabi",
+      "street": "Desert Bloom Boulevard",
+      "streetNumber": "456"
+    },
+    "rooms": [
+      {
+        "type": "Dune View Suite",
+        "price": 650.0,
+        "capacity": 3
+      },
+      {
+        "type": "Royal Desert Villa",
+        "price": 1200.0,
+        "capacity": 8
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Desert_Oasis_Resort.jpg",
+        "caption": "Tranquil Desert Escape"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Enchanted Forest Lodge",
+      "about": "Immerse yourself in the magic of an enchanted forest retreat.",
+      "email": "info@enchantedforest.com",
+      "phoneNumber": "555-666-7777"
+    },
+    "address": {
+      "country": "Canada",
+      "city": "Whistler",
+      "street": "Mystic Forest Trail",
+      "streetNumber": "789"
+    },
+    "rooms": [
+      {
+        "type": "Forest View Cabin",
+        "price": 500.0,
+        "capacity": 2
+      },
+      {
+        "type": "Eagle's Nest Suite",
+        "price": 800.0,
+        "capacity": 4
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Enchanted_Forest_Lodge.jpg",
+        "caption": "Magical Forest Retreat"
+      }
+    ]
+  },
+  {
+    "hotel": {
+      "name": "Seaside Elegance Hotel",
+      "about": "Indulge in seaside elegance with stunning oceanfront views.",
+      "email": "info@seasideelegance.com",
+      "phoneNumber": "111-222-3333"
+    },
+    "address": {
+      "country": "France",
+      "city": "Nice",
+      "street": "Promenade des Anglais",
+      "streetNumber": "101"
+    },
+    "rooms": [
+      {
+        "type": "Oceanfront Suite",
+        "price": 750.0,
+        "capacity": 3
+      },
+      {
+        "type": "Luxury Penthouse",
+        "price": 1100.0,
+        "capacity": 6
+      }
+    ],
+    "images": [
+      {
+        "fileName": "Seaside_Elegance_Hotel.jpg",
+        "caption": "French Riviera Bliss"
+      }
+    ]
+  }
+  
+]
