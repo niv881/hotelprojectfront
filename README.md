@@ -8,47 +8,53 @@ this project full responsive.
 3. ![responsive 2](https://github.com/niv881/hotelprojectfront/assets/111022872/2991f54a-084f-4609-a081-c4849b2d6459)
 
 
+## How to use this code on your own
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
+* First you need to clone this project
+* Second keep in mind to clone the backend project in this Link : [Hotel Project Backend](https://github.com/niv881/hotelsProject)
+* Finally use -> npm start and
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech stack and open source libraries
 
-### `npm test`
+* visual Studio Code
+* React - Tsx
+* AXIOS
+* tailwind css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## more thing that good to know
 
-### `npm run build`
+In this project that 4 plattforms : 
+1. without Login user
+2. with regular user
+3. with manager user
+4. with admin user 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+for your convenience i creat in the backend side after you rn it 3 default user :
+1. regular : defaultUser
+2. manager : defaultManager
+3. admin : defaultAdmin
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+the password for all is : **12345678Aa**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+for all this user have some spacial thing that i explain one by one.
 
-### `npm run eject`
+### without Login :
+!['without user](https://github.com/niv881/hotelprojectfront/assets/111022872/a7ca1ee2-99a3-49f1-8d17-4925b2a1d665)
+if you enter to the site without Login in you can see all the Hotel and choose date for your vaction but you cant order one.
+**you must to register or Login for order room** 
+![צילום מסך 2023-12-23 125837](https://github.com/niv881/hotelprojectfront/assets/111022872/28df9b8e-1c4b-4125-9b57-183916f7f9da)
+### with regular user:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![צילום מסך 2023-12-23 130802](https://github.com/niv881/hotelprojectfront/assets/111022872/739b9aa6-a75f-453a-8b79-eea9e5fd8551)
+Now you can to move the Room order and place your order.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### with manager : 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
