@@ -69,7 +69,7 @@ now you add hotel to the database :
 
 
 after you finish you navigate to publish image for the hotel 
-###**The limite of image size its 50kb** :
+### **The limite of image size its 50kb** :
 ![צילום מסך 2023-12-23 131709](https://github.com/niv881/hotelprojectfront/assets/111022872/2636336b-8c66-4974-847e-65c69105139c)
 
 
@@ -78,6 +78,30 @@ Now you can see the hotel add to the search :
 
 ![צילום מסך 2023-12-23 131740](https://github.com/niv881/hotelprojectfront/assets/111022872/82bc155e-c340-4918-832b-722a056b72e7)
 
+
+### with Admin :
+the different between manager to admimn is he admin can add new manager to the system : 
+ now you will find in the Nav Bar Register New Namager : 
+
+![צילום מסך 2023-12-23 132659](https://github.com/niv881/hotelprojectfront/assets/111022872/bc5a2972-804b-4979-9a94-2971adba6995)
+
+
+### more picture of the project : 
+Choose a room :
+
+![צילום מסך 2023-12-23 132837](https://github.com/niv881/hotelprojectfront/assets/111022872/e158a32e-224b-498f-ad89-db2ea66eac34)
+
+Order Details : 
+
+![צילום מסך 2023-12-23 132854](https://github.com/niv881/hotelprojectfront/assets/111022872/cec5ae9b-9585-4515-ac1d-3d52da748b5d)
+
+Place Order : 
+
+![צילום מסך 2023-12-23 132911](https://github.com/niv881/hotelprojectfront/assets/111022872/cdc5879e-4df0-4963-b68b-e1ae4ca41458)
+
+After submit : 
+
+![צילום מסך 2023-12-23 132953](https://github.com/niv881/hotelprojectfront/assets/111022872/96825b20-897c-46e1-befe-5e9c9b72e90b)
 
 
 
