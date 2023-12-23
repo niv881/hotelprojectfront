@@ -103,6 +103,18 @@ After submit :
 
 ![צילום מסך 2023-12-23 132953](https://github.com/niv881/hotelprojectfront/assets/111022872/96825b20-897c-46e1-befe-5e9c9b72e90b)
 
+### you can change the all app to dark mode  : 
+
+![צילום מסך 2023-12-23 133249](https://github.com/niv881/hotelprojectfront/assets/111022872/c7ae7329-fef8-4f66-b5df-58419be06e5e)
+
+![צילום מסך 2023-12-23 133314](https://github.com/niv881/hotelprojectfront/assets/111022872/2b643e9a-a894-4a78-bad7-7dc185048d0a)
+
+![צילום מסך 2023-12-23 133324](https://github.com/niv881/hotelprojectfront/assets/111022872/d3d63b74-6aff-480c-81ac-eeb6322f4287)
+
+![צילום מסך 2023-12-23 133338](https://github.com/niv881/hotelprojectfront/assets/111022872/c96044d1-d348-4c63-9069-f72425a3fce6)
+
+
+
 
 
 
