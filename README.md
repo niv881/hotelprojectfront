@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to LookingApp, this a demo project where luxury meets affordability in the heart of our commitment to social responsibility. At LookingApp, we believe in making travel accessible to everyone without compromising on comfort and quality.
+this project full responsive.
+
+1. !['without user](https://github.com/niv881/hotelprojectfront/assets/111022872/a7ca1ee2-99a3-49f1-8d17-4925b2a1d665)
+2. ![צילום מסך 2023-12-23 123733](https://github.com/niv881/hotelprojectfront/assets/111022872/daf0d5a8-ae1e-46e4-a838-4dec3f21e539)
+3. ![responsive 2](https://github.com/niv881/hotelprojectfront/assets/111022872/2991f54a-084f-4609-a081-c4849b2d6459)
+
+
+
 
 ## Available Scripts
 
